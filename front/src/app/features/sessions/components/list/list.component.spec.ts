@@ -83,10 +83,26 @@ describe('ListComponent Unit Tests Suite', () => {
   });
 
   it("should display edit buttons and Create button for admins", () => {
-    //TODO
+
+    const createButton = fixture.nativeElement.querySelector("button[routerLink='create']");
+    const editButtons = fixture.nativeElement.querySelectorAll("button[ng-reflect-router-link*='update']");
+
+    expect(createButton).toBeTruthy();
+    expect(editButtons.length).toBe(2);
+
   });
 
   it("should not display the edit buttons and Create button for non-admins", () => {
-    //TODO
+
+    mockSessionService.sessionInformation = { admin: false };
+
+    fixture.detectChanges();
+
+    const createButton = fixture.nativeElement.querySelector("button[routerLink='create']");
+    const editButtons = fixture.nativeElement.querySelectorAll("button[ng-reflect-router-link*='update']");
+
+    expect(createButton).toBeFalsy();
+    expect(editButtons.length).toBe(0);
+
   });
 });
