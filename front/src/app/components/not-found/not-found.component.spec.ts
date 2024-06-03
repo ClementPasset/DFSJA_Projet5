@@ -3,7 +3,7 @@ import { expect } from '@jest/globals';
 
 import { NotFoundComponent } from './not-found.component';
 
-describe('NotFoundComponent', () => {
+describe('NotFoundComponent Unit Tests Suite', () => {
   let component: NotFoundComponent;
   let fixture: ComponentFixture<NotFoundComponent>;
 
@@ -19,6 +19,14 @@ describe('NotFoundComponent', () => {
   });
 
   it('should create', () => {
+
     expect(component).toBeTruthy();
+
+  });
+
+  it("should display 'Page not found'", () => {
+
+    expect(fixture.nativeElement.querySelector("h1").textContent).toBe("Page not found !");
+
   });
 });
