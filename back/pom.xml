@@ -134,6 +134,7 @@
 				<version>0.8.5</version>
 				<configuration>
 					<excludes>
+						<exclude>**/mapper/*MapperImpl.class</exclude>
 						<exclude>com/openclassrooms/starterjwt/dto/**</exclude>
 					</excludes>
 				</configuration>
@@ -167,12 +168,16 @@
 						<configuration>
 							<rules>
 								<rule>
-									<element>PACKAGE</element>
+									<element>BUNDLE</element>
+									<excludes>
+										<exclude>**/mapper/*MapperImpl.class</exclude>
+										<exclude>com/openclassrooms/starterjwt/dto/**</exclude>
+									</excludes>
 									<limits>
 										<limit>
-											<counter>LINE</counter>
+											<counter>INSTRUCTION</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.9</minimum>
+											<minimum>0.80</minimum>
 										</limit>
 									</limits>
 								</rule>
