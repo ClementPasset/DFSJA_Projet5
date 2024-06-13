@@ -3,7 +3,9 @@
 ## Introduction
 
 Le but de ce projet est de réaliser les tests unitaires et d'intégration, pour la partie front-end et back-end de l'application.
+
 Également, des tests End-To-End sont réalisés dans le cadre du projet
+
 Ce fichier décrit les étapes à suivre pour pouvoir lancer le projet et les tests associés
 
 ## Cloner le repository git
@@ -23,15 +25,19 @@ Après avoir créé la base de données et un utilisateur ayant accès à cette 
 Pour ça, on aura besoin des variables d'environnement suivantes :
 
 spring.datasource.url -> Contient l'URL vers la base de données
+
 spring.datasource.username -> Contient le nom d'utilisateur de l'utilisateur qui a accès à la base de données
+
 spring.datasource.password -> Contient le mot de passe de cet utilisateur
 
 À la racine du projet, on trouvere le fichier ressources/sql/script.sql
+
 Ce fichier contient les commandes à lancer pour initialiser les tables de la base de données
 
 ## Lancer les tests et construire le back-end
 
 Il faut d'abord se rendre dans le dossier back/ si ce n'est pas déjà le cas, puis lancer la commande `mvn clean verify`.
+
 Cette commande va lancer les tests unitaires et les tests d'intégration avant de contruire l'application.
 
 ## Lancer l'application back-end
@@ -42,7 +48,9 @@ Le .jar sera créé grâce à la commande précédente dans le dossier target/, 
 ## Installer les dépendances du front-end
 
 Pour ça, il faudra se rendre dans le dossier front/
+
 Si vous êtes à la racine du proet : `cd front/`
+
 Si vous êtes dans le dossier back/ : `cd ../front/`
 
 Puis il faudra lancer la commande `npm install` ou le raccourcis `npm i`
